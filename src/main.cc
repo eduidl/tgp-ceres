@@ -1,5 +1,4 @@
 #include <algorithm>
-#include <cassert>
 #include <cstdlib>
 #include <memory>
 #include <string>
@@ -16,9 +15,9 @@ int main(int, char** argv) {
 
   const auto h = std::max(std::atoi(argv[1]), std::atoi(argv[2]));
   const auto k = std::min(std::atoi(argv[1]), std::atoi(argv[2]));
-  assert(h >= k && k >= 0);
   auto poly = std::make_shared<app::Polyhedron<double>>(h, k);
   const auto abs_point_size = poly->AbsPointSize();
+
   std::vector<double> theta_vec(abs_point_size);
   std::vector<double> phi_vec(abs_point_size);
   poly->GetInitialParams(theta_vec, phi_vec);

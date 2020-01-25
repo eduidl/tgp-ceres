@@ -30,7 +30,7 @@ template <typename T>
 class Triangle {
  public:
   Triangle(PointPtr<T> p1, PointPtr<T> p2, PointPtr<T> p3);
-  ~Triangle() = default;
+  virtual ~Triangle() = default;
 
   std::vector<LineSegment<T>> Edges() const;
 

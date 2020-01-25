@@ -7,9 +7,9 @@ namespace app {
 namespace {
 
 template <typename T>
-std::tuple<T, T, T> InitXYZ(uint x, uint y, uint f, uint d) {
-  const T xd = T(1) - T((x + 1) * 2) / T(d + 2);
-  const T yd = T(1) - T((y + 1) * 2) / T(d + 2);
+std::tuple<T, T, T> InitXYZ(T x, T y, uint f, T d) {
+  const T xd = (d - x * T(2.)) / (d + T(2.));
+  const T yd = (d - y * T(2.)) / (d + T(2.));
   switch (f) {
     case 0:
       return std::make_tuple(xd, yd, 1.);
@@ -33,7 +33,7 @@ std::tuple<T, T, T> InitXYZ(uint x, uint y, uint f, uint d) {
 template <typename T>
 Point<T>::Point(size_t id, uint x, uint y, uint f, uint d)
     : id_(id), relative_point_(nullptr), conversion_mat_(std::nullopt) {
-  const auto [xx, yy, zz] = InitXYZ<T>(x, y, f, d);
+  const auto [xx, yy, zz] = InitXYZ<T>(T(x), T(y), f, T(d));
   const auto r = std::hypot(xx, yy, zz);
   theta_ = std::acos(zz / r);
   phi_ = std::atan2(yy, xx);

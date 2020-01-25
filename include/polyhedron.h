@@ -29,12 +29,10 @@ class Polyhedron {
   void UpdateParams(T const* const theta, T const* const phi);
   void DumpTs(std::string& fname) const;
 
-  size_t EdgeSize() const { return edges_.size(); }
-  T EdgeLength(size_t i) const { return edges_[i].Length(); }
+  const std::vector<LineSegment<T>>& Edges() const { return edges_; }
+  const std::vector<LineSegment<T>>& Diagonals() const { return diagonals_; }
   T EdgeLengthMean() const { return edge_length_mean_; }
   size_t AbsPointSize() const { return abs_point_indices_.size(); }
-  size_t DiagonalSize() const { return diagonals_.size(); }
-  T DiagonalLength(size_t i) const { return diagonals_[i].Length(); }
 
  private:
   inline size_t Id(uint x, uint y, uint f) const;
