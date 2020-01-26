@@ -33,7 +33,7 @@ cmale .. && make -j
 Both `h` and `k` should be intergers which are not less than zero. The meanings of `h` and `k` is described in paper and articles I mentioned.
 
 ```sh
-./main [h] [k]
+./main <h> <k>
 ```
 
 ### Visualization
