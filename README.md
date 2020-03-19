@@ -25,7 +25,7 @@ NOTE: This program cannot distinguish chirarity.
 
 ```sh
 mkdir build && cd build
-cmale .. && make -j
+cmake .. && make -j
 ```
 
 ## Run
