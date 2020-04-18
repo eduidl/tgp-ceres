@@ -30,7 +30,7 @@ int main(int argc, char** argv) {
     return -1;
   }
 
-  auto polyhedron = std::make_shared<app::Polyhedron<double>>(h, k);
+  auto polyhedron = std::make_shared<polyhedron::Polyhedron<double>>(h, k);
   const auto abs_point_size = polyhedron->AbsPointSize();
 
   std::vector<double> theta_vec(abs_point_size);
@@ -38,7 +38,7 @@ int main(int argc, char** argv) {
   polyhedron->GetInitialParams(theta_vec, phi_vec);
 
   ceres::Problem problem;
-  auto cost = app::PolyhedronCostFunctor::Create(polyhedron);
+  auto cost = polyhedron::PolyhedronCostFunctor::Create(polyhedron);
   problem.AddResidualBlock(cost, NULL, theta_vec.data(), phi_vec.data());
 
   ceres::Solver::Options options;

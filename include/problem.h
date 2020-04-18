@@ -7,7 +7,7 @@
 
 #include "polyhedron.h"
 
-namespace app {
+namespace polyhedron {
 
 struct PolyhedronCostFunctor {
   explicit PolyhedronCostFunctor(std::shared_ptr<Polyhedron<double>> polyhedron) : polyhedron_(polyhedron) {}
@@ -45,4 +45,4 @@ struct PolyhedronCostFunctor {
   std::shared_ptr<Polyhedron<double>> polyhedron_;
 };
 
-}  // namespace app
+}  // namespace polyhedron
