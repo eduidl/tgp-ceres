@@ -1,4 +1,4 @@
-import { Point, Edge } from "./types";
+import { Point, Edge } from './types';
 
 export const POINTS: Point[] = [
   [0, -0, 1],
@@ -6,7 +6,7 @@ export const POINTS: Point[] = [
   [0, 1, 0],
   [0, -1, 0],
   [0, 0, -1],
-  [-1, 0, 0]
+  [-1, 0, 0],
 ];
 
 export const EDGES: Edge[] = [
@@ -21,5 +21,5 @@ export const EDGES: Edge[] = [
   [5, 0],
   [5, 2],
   [5, 3],
-  [5, 4]
+  [5, 4],
 ];

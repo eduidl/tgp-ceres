@@ -1,5 +1,5 @@
-import Visualizer from "./visualizer";
-import { POINTS, EDGES } from "./data";
+import Visualizer from './visualizer';
+import { POINTS, EDGES } from './data';
 
 const visualizer = new Visualizer();
 visualizer.initialize(POINTS, EDGES);
