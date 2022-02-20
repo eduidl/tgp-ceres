@@ -4,9 +4,9 @@
   "description": "",
   "main": "visualize/index.ts",
   "scripts": {
-    "start": "webpack-dev-server -w --open",
-    "lint": "eslint src --ext .ts",
-    "lint:fix": "eslint src --ext .ts --fix"
+    "start": "webpack-dev-server --static-watch --open",
+    "lint": "eslint visualize --ext .ts",
+    "lint:fix": "eslint visualize --ext .ts --fix"
   },
   "repository": {
     "type": "git",
@@ -19,18 +19,19 @@
   },
   "homepage": "https://github.com/eduidl/tgv-ceres#readme",
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^2.13.0",
-    "@typescript-eslint/parser": "^2.13.0",
-    "eslint": "^6.8.0",
-    "eslint-config-prettier": "^6.9.0",
-    "eslint-loader": "^3.0.3",
-    "html-webpack-plugin": "^3.2.0",
-    "prettier": "^1.19.1",
-    "three": "^0.125.0",
-    "ts-loader": "^6.2.1",
-    "typescript": "^3.7.4",
-    "webpack": "^4.41.5",
-    "webpack-cli": "^3.3.10",
-    "webpack-dev-server": "^3.10.1"
+    "@types/three": "^0.137.0",
+    "@typescript-eslint/eslint-plugin": "*",
+    "@typescript-eslint/parser": "*",
+    "eslint": "*",
+    "eslint-config-prettier": "*",
+    "eslint-loader": "*",
+    "html-webpack-plugin": "*",
+    "prettier": "*",
+    "three": "^0.137.5",
+    "ts-loader": "*",
+    "typescript": "^4.5.5",
+    "webpack": "^5.69.1",
+    "webpack-cli": "*",
+    "webpack-dev-server": "*"
   }
 }
